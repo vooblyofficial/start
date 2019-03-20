@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.game {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    border: 4px solid;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.layer3 {
+    z-index: -1;
+    position: absolute;
+    height: 300px;
+}
+
+#trees {
+    z-index: 1;
+    position: absolute;
+    left: -15%;
+    top: -10%;
+    height: 100%;
+    width: 120%;
+}
+
+#ground {
+    z-index: 2;
+    position: absolute;
+    top: 200px;
+    height: 100px;
+    width: 1200px;
+    background: url("imgs/groundpattern.png") repeat-x;
+    animation: groundScroll 4s linear forwards infinite;
+}
+
+.layer1 {
+    z-index: 4;
+    position: absolute;
+    top: 150px;
+    height: 100%;
+    width: 2400px;
+    background: url("imgs/foreground.png") repeat-x;
+    animation: foregroundScroll 4s linear forwards infinite;
+}
+
+#walking {
+    z-index: 3;
+    position: absolute;
+    top: 130px;
+    left: 225px;
+    height: 100px;
+    width: auto;
+    transform: scaleX(-1);
+}
+
+@keyframes groundScroll {
+    100% {
+        transform: translateX(-600px);
+    }
+
+}
+
+@keyframes foregroundScroll {
+    100% {
+        transform: translateX(-1200px);
+    }
+}
