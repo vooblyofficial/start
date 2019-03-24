@@ -24,10 +24,13 @@ html, body {
 #trees {
     z-index: 1;
     position: absolute;
-    left: -15%;
-    top: -10%;
-    height: 100%;
-    width: 120%;
+    height: 250px;
+    width: 2000px;
+    top: 10px;
+    left: -70px;
+    background: url('imgs/trees.png') repeat-x;
+    background-size: 1000px 250px;
+    animation: bgScroll 20s linear forwards infinite;
 }
 
 #ground {
@@ -54,7 +57,7 @@ html, body {
     z-index: 3;
     position: absolute;
     top: 130px;
-    left: 225px;
+    left: 280px;
     height: 100px;
     width: auto;
     transform: scaleX(-1);
@@ -70,5 +73,11 @@ html, body {
 @keyframes foregroundScroll {
     100% {
         transform: translateX(-1200px);
+    }
+}
+
+@keyframes bgScroll {
+    100% {
+        transform: translateX(-1000px);
     }
 }
