@@ -21,16 +21,16 @@ html, body {
     height: 300px;
 }
 
-#trees {
+#skyline {
     z-index: 1;
     position: absolute;
-    height: 250px;
-    width: 2000px;
-    top: 10px;
+    height: 225px;
+    width: 2400px;
+    top: 20px;
     left: -70px;
-    background: url('imgs/trees.png') repeat-x;
-    background-size: 1000px 250px;
-    animation: bgScroll 20s linear forwards infinite;
+    background: url('imgs/skyline.png') repeat-x;
+    background-size: 1200px 225px;
+    animation: bgScroll 30s linear forwards infinite;
 }
 
 #ground {
@@ -46,7 +46,7 @@ html, body {
 .layer1 {
     z-index: 4;
     position: absolute;
-    top: 150px;
+    top: 130px;
     height: 100%;
     width: 2400px;
     background: url("imgs/foreground.png") repeat-x;
@@ -78,6 +78,6 @@ html, body {
 
 @keyframes bgScroll {
     100% {
-        transform: translateX(-1000px);
+        transform: translateX(-1200px);
     }
 }
