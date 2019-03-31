@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background: rgba(18,127,214,255);
 }
 
 .game {
@@ -57,10 +58,21 @@ html, body {
     z-index: 3;
     position: absolute;
     top: 130px;
-    left: 280px;
+    left: 200px;
     height: 100px;
     width: auto;
     transform: scaleX(-1);
+}
+
+#gold {
+    z-index: 3;
+    position: absolute;
+    top: 130px;
+    left: 420px;
+    height: auto;
+    width: auto;
+    filter: drop-shadow(0px 0px 20px #f4d742);
+    animation: bounce 1s alternate infinite;
 }
 
 @keyframes groundScroll {
@@ -79,5 +91,11 @@ html, body {
 @keyframes bgScroll {
     100% {
         transform: translateX(-1200px);
+    }
+}
+
+@keyframes bounce {
+    100% {
+        transform: translateY(-20px);
     }
 }
